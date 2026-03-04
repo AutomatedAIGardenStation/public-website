@@ -1,12 +1,11 @@
+import HeroSection from "@/components/sections/HeroSection";
+import ProductSection from "@/components/sections/ProductSection";
+
 export default function Home() {
   return (
     <main>
-      <section
-        id="product"
-        className="min-h-screen flex items-center justify-center border-b border-gray-200"
-      >
-        <h2 className="text-3xl font-bold">About Section TBD</h2>
-      </section>
+      <HeroSection />
+      <ProductSection />
 
       <section
         id="features"
