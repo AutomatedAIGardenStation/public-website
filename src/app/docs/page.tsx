@@ -1,5 +1,14 @@
 import React from "react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Documentation",
+  description: "Guides, tutorials, and API references for your Garden Station.",
+  alternates: {
+    canonical: "/docs/",
+  },
+};
 
 export default function DocsPage() {
   return (

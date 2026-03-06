@@ -1,5 +1,26 @@
+import { Metadata } from 'next';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import Link from 'next/link';
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const postData = await getPostData(id);
+
+  return {
+    title: postData.title,
+    description: postData.excerpt || `Read ${postData.title} on the Garden Station blog.`,
+    alternates: {
+      canonical: `/blog/${id}/`,
+    },
+    openGraph: {
+      title: postData.title,
+      description: postData.excerpt || `Read ${postData.title} on the Garden Station blog.`,
+      type: "article",
+      publishedTime: postData.date,
+      url: `https://gardenstation.app/blog/${id}/`,
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const paths = getAllPostIds();
