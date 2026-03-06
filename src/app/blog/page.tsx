@@ -1,5 +1,14 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Read the latest news, updates, and growing tips from Garden Station.",
+  alternates: {
+    canonical: "/blog/",
+  },
+};
 
 export default function Blog() {
   const allPostsData = getSortedPostsData();

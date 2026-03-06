@@ -1,5 +1,14 @@
 import React from "react";
+import { Metadata } from "next";
 import VersionsSection from "@/components/sections/VersionsSection";
+
+export const metadata: Metadata = {
+  title: "Pricing & Versions",
+  description: "Find the right Garden Station automated growing system version for your needs.",
+  alternates: {
+    canonical: "/pricing/",
+  },
+};
 
 export default function PricingPage() {
   return (

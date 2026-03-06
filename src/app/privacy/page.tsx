@@ -1,4 +1,13 @@
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Read the privacy policy for Garden Station. We take your privacy seriously.",
+  alternates: {
+    canonical: "/privacy/",
+  },
+};
 
 export default function PrivacyPage() {
   return (

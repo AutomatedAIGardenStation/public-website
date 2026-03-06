@@ -1,6 +1,15 @@
 import React from "react";
+import { Metadata } from "next";
 import FAQSection from "@/components/sections/FAQSection";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Support & FAQ",
+  description: "Find answers to frequently asked questions and get support for your Garden Station automated indoor growing system.",
+  alternates: {
+    canonical: "/support/",
+  },
+};
 
 export default function SupportPage() {
   return (

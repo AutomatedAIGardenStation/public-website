@@ -7,17 +7,29 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Garden Station — Automated Indoor Growing System",
+  title: {
+    template: "%s | Garden Station",
+    default: "Garden Station — Automated Indoor Growing System",
+  },
   description: "Garden Station automates your entire plant lifecycle using computer vision, AI decisions, and precise hardware control. No cloud required.",
   metadataBase: new URL("https://gardenstation.app"),
+  keywords: ["garden station", "automated indoor growing", "hydroponics", "computer vision garden", "AI plant care"],
+  authors: [{ name: "Garden Station Team" }],
   openGraph: {
-    title: "Garden Station — Automated Indoor Growing System",
+    title: {
+      template: "%s | Garden Station",
+      default: "Garden Station — Automated Indoor Growing System",
+    },
     description: "Garden Station automates your entire plant lifecycle using computer vision, AI decisions, and precise hardware control. No cloud required.",
     type: "website",
     siteName: "Garden Station",
+    url: "https://gardenstation.app",
   },
   twitter: {
     card: "summary_large_image",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
