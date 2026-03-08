@@ -1,4 +1,5 @@
 import React from "react";
+import Station3DViewer from "./Station3DViewer";
 
 export default function InteractiveShowcaseSection() {
   return (
@@ -35,20 +36,11 @@ export default function InteractiveShowcaseSection() {
           </div>
         </div>
 
-        {/* Interactive 3D/GIF Showcase Container */}
+        {/* Interactive 3D Showcase Container */}
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden bg-white/5 border border-white/20 shadow-2xl backdrop-blur-sm group cursor-pointer">
-            {/* Placeholder for 3D Viewer or GIF */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-primary-dark/40 to-primary/20 transition-transform duration-700 group-hover:scale-105">
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4 animate-bounce">🦾</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Interactive 3D View</h3>
-                <p className="text-gray-300 text-sm">Click to rotate and zoom</p>
-              </div>
-            </div>
-
-            {/* Simulated Parallax Overlay effect */}
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-60"></div>
+          <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden bg-slate-950 border border-white/20 shadow-2xl">
+            <Station3DViewer showControls={true} className="rounded-2xl" />
+            <div className="absolute inset-0 pointer-events-none rounded-2xl bg-gradient-to-t from-gray-900/60 to-transparent" aria-hidden />
           </div>
         </div>
       </div>
